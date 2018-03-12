@@ -68,6 +68,7 @@
     <Compile Include="DAL\GenericRepo.cs" />
     <Compile Include="DAL\ProjectRepo.cs" />
     <Compile Include="DAL\TaskRepo.cs" />
+    <Compile Include="DAL\TestingDeveloperRepo.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Customer.cs" />
