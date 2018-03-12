@@ -21,22 +21,22 @@ namespace Centisoft.Core.BLL
             CustomerRepo.Save(Customer);
         }
 
-        public void deleteCustomer(int id)
+        public void DeleteCustomer(int id)
         {
             CustomerRepo.Delete(id);
         }
 
-        public Customer findCustomer(int id)
+        public Customer FindCustomer(int id)
         {
             return CustomerRepo.Load(id);
         }
 
-        public List<Customer> findAllCustomers()
+        public List<Customer> FindAllCustomers()
         {
             return CustomerRepo.LoadAll();
         }
 
-        public void updateDeveloepr(Customer customer)
+        public void UpdateDeveloepr(Customer customer)
         {
             CustomerRepo.Save(customer);
         }
