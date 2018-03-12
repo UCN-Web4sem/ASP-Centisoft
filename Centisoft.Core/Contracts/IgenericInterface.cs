@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Centisoft.Core.Contracts
 {
-    public interface IgenericInterface<T> where T: class
+    public interface IGenericInterface<T> where T: class
     {
         void Save(T t);
         T Get(int id);

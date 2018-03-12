@@ -11,13 +11,13 @@ namespace Centisoft.Core.Contracts
     {
         void CreateDeveloper(Developer developer);
 
-        void deleteDeveloper(int id);
+        void DeleteDeveloper(int id);
 
-        Developer findDeveloper(int id);
+        Developer FindDeveloper(int id);
 
-        List<Developer> findAllDevelopers();
+        List<Developer> FindAllDevelopers();
 
-        void updateDeveloepr(Developer dev);
+        void UpdateDeveloepr(Developer dev);
         
     }
 }

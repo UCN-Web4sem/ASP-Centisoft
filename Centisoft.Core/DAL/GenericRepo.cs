@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Centisoft.Core.DAL
 {
-    public class GenericRepo<T> : IgenericInterface<T> where T : class
+    public class GenericRepo<T> : IGenericInterface<T> where T : class
     {
         private CentisoftContext context;
         private IDbSet<T> dbset;
