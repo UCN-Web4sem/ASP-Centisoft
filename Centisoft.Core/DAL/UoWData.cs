@@ -9,14 +9,14 @@ using Centisoft.Core.DAL;
 
 namespace Centisoft.Core.BLL
 {
-    public class UoWFacade : IUoW
+    public class UoWData : IUoW
     {
         public IGenericInterface<Customer> CustomerRepo { get ; set ; }
         public IGenericInterface<Developer> DeveloperRepo { get ; set ; }
 
         private CentisoftContext context;
 
-        public UoWFacade()
+        public UoWData()
         {
             context = new CentisoftContext();
             CustomerRepo = new GenericRepo<Customer>(context);
@@ -29,11 +29,7 @@ namespace Centisoft.Core.BLL
             context.SaveChanges();
         }
 
-        public void SaveDeveloper(Developer dev)
-        {
-            DeveloperRepo.Save(dev);
-            this.Commit();
-        }
+
     }
     
 }

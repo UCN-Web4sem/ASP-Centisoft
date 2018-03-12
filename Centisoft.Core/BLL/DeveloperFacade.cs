@@ -11,36 +11,39 @@ namespace Centisoft.Core.BLL
 {
     public class DeveloperFacade : IDeveloperFacade
     {
-        private IGenericInterface<Developer> developerRepo;
-        public DeveloperFacade(IGenericInterface<Developer> developerRepo)
+        private IUoW UoW;
+        public DeveloperFacade(IUoW UoW)
         {
-            this.developerRepo = developerRepo;
+            this.UoW = UoW;
         }
 
         public void CreateDeveloper(Developer developer)
         {
-            developerRepo.Save(developer);
+            UoW.DeveloperRepo.Save(developer);
+            UoW.Commit();
         }
 
         public void DeleteDeveloper(int id)
         {
-            Developer dev = developerRepo.Get(id);
-            developerRepo.Delete(dev);
+            Developer dev = UoW.DeveloperRepo.Get(id);
+            UoW.DeveloperRepo.Delete(dev);
+            UoW.Commit();
         }
 
         public Developer FindDeveloper(int id)
         {
-            return developerRepo.Get(id);
+            return UoW.DeveloperRepo.Get(id);
         }
 
         public List<Developer> FindAllDevelopers()
         {
-            return developerRepo.GetAll();
+            return UoW.DeveloperRepo.GetAll();
         }
 
         public void UpdateDeveloepr(Developer dev)
         {
-            developerRepo.Save(dev);
+            UoW.DeveloperRepo.Save(dev);
+            UoW.Commit();
         }        
     }
 }

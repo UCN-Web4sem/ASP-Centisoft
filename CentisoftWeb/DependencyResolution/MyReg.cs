@@ -16,6 +16,7 @@ namespace CentisoftWeb.DependencyResolution
         public MyReg()
         {
             For<IDeveloperFacade>().Use<DeveloperFacade>();
+            For<IUoW>().Use<UoWData>();
             For<IGenericInterface<Developer>>().Use<GenericRepo<Developer>>();
 
         }
