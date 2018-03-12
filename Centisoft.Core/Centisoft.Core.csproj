@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="BLL\CustomerFacade.cs" />
     <Compile Include="BLL\DeveloperFacade.cs" />
+    <Compile Include="BLL\UoWFacade.cs" />
     <Compile Include="Contracts\IDeveloperFacade.cs" />
     <Compile Include="Contracts\IGenericInterface.cs" />
+    <Compile Include="Contracts\IUoW.cs" />
     <Compile Include="DAL\BaseRepo.cs" />
     <Compile Include="DAL\CentisoftContext.cs" />
     <Compile Include="DAL\ClientRepo.cs" />

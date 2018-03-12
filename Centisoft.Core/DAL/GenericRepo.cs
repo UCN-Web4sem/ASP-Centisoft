@@ -13,9 +13,14 @@ namespace Centisoft.Core.DAL
     {
         private CentisoftContext context;
         private IDbSet<T> dbset;
-        public GenericRepo()
+        //public GenericRepo()
+        //{
+        //    context = new CentisoftContext();
+        //    dbset = context.Set<T>();
+        //}
+        public GenericRepo(CentisoftContext context)
         {
-            context = new CentisoftContext();
+            this.context = context;
             dbset = context.Set<T>();
         }
         public void Save(T t)
@@ -30,13 +35,13 @@ namespace Centisoft.Core.DAL
             {
                 this.dbset.Add(t);
             }
-            this.context.SaveChanges();
+            //this.context.SaveChanges();
         }
 
         public void Delete(T t)
         {
             this.dbset.Remove(t);
-            this.context.SaveChanges();
+            //this.context.SaveChanges();
         }
 
         public T Get(int id)
