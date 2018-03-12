@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DefaultRegistry.cs" company="Web Advanced">
+// <copyright file="IoC.cs" company="Web Advanced">
 // Copyright 2012 Web Advanced (www.webadvanced.com)
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,13 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Centisoft.Core.DependencyResolution {
-    using StructureMap.Configuration.DSL;
-    using StructureMap.Graph;
+
+namespace CentisoftWeb.DependencyResolution {
+    using StructureMap;
 	
-    public class DefaultRegistry : Registry {
-        #region Constructors and Destructors
-
-        public DefaultRegistry() {
-            Scan(
-                scan => {
-                    scan.TheCallingAssembly();
-                    scan.WithDefaultConventions();
-					scan.With(new ControllerConvention());
-                });
-            //For<IExample>().Use<Example>();
+    public static class IoC {
+        public static IContainer Initialize() {
+            return new Container(c => c.AddRegistry<DefaultRegistry>());
         }
-
-        #endregion
     }
 }

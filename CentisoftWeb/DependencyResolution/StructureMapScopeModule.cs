@@ -1,7 +1,7 @@
-namespace Centisoft.Core.DependencyResolution {
+namespace CentisoftWeb.DependencyResolution {
     using System.Web;
 
-    using Centisoft.Core.App_Start;
+    using CentisoftWeb.App_Start;
 
     using StructureMap.Web.Pipeline;
 

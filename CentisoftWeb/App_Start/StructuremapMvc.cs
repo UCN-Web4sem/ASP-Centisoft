@@ -15,19 +15,19 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Centisoft.Core.App_Start;
+using CentisoftWeb.App_Start;
 
 using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
 [assembly: ApplicationShutdownMethod(typeof(StructuremapMvc), "End")]
 
-namespace Centisoft.Core.App_Start {
+namespace CentisoftWeb.App_Start {
 	using System.Web.Mvc;
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
-	using Centisoft.Core.DependencyResolution;
+	using CentisoftWeb.DependencyResolution;
 
     using StructureMap;
     

@@ -15,7 +15,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Centisoft.Core.DependencyResolution {
+namespace CentisoftWeb.DependencyResolution {
     using System;
     using System.Collections.Generic;
     using System.Linq;
