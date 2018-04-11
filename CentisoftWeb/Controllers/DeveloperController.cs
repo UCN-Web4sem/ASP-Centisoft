@@ -33,7 +33,8 @@ namespace CentisoftWeb.Controllers
         // GET: Developer/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Developer dev = developerFacade.FindDeveloper(id);
+            return View(dev);
         }
 
         // GET: Developer/Create
