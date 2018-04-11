@@ -36,7 +36,7 @@ namespace Centisoft.Core.BLL
             return CustomerRepo.LoadAll();
         }
 
-        public void UpdateDeveloepr(Customer customer)
+        public void UpdateCustomer(Customer customer)
         {
             CustomerRepo.Save(customer);
         }

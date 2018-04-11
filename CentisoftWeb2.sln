@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centisoft.Core", "Centisoft.Core\Centisoft.Core.csproj", "{D614E503-F865-4849-989A-395E6429548D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentisoftWeb", "CentisoftWeb\CentisoftWeb.csproj", "{8F29284C-D8CB-4BEF-BF73-7E533E8316F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentisoftWeb.Tests", "CentisoftWeb.Tests\CentisoftWeb.Tests.csproj", "{03B8B4DA-9219-4189-8565-53677F88C1F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centisoft.WebApi", "Centisoft.WebApi\Centisoft.WebApi.csproj", "{66CD7F0C-CE39-4AD9-BBCF-F7DCE6C4245C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{03B8B4DA-9219-4189-8565-53677F88C1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B8B4DA-9219-4189-8565-53677F88C1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03B8B4DA-9219-4189-8565-53677F88C1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CD7F0C-CE39-4AD9-BBCF-F7DCE6C4245C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CD7F0C-CE39-4AD9-BBCF-F7DCE6C4245C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CD7F0C-CE39-4AD9-BBCF-F7DCE6C4245C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CD7F0C-CE39-4AD9-BBCF-F7DCE6C4245C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
