@@ -25,7 +25,7 @@ namespace Centisoft.WebApi.Controllers
         {
             return cFacade.FindAllCustomers();
         }
-
+        [Security]
         // GET: api/Customer/5
         public Customer Get(int id)
         {
