@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ClientFacade.cs" />
     <Compile Include="BLL\CustomerFacade.cs" />
     <Compile Include="BLL\DeveloperFacade.cs" />
     <Compile Include="DAL\UoWData.cs" />
@@ -72,6 +73,12 @@
     <Compile Include="DAL\TaskRepo.cs" />
     <Compile Include="DAL\TestingDeveloperRepo.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelModel\BaseModel.cs" />
+    <Compile Include="ModelModel\ClientModel.cs" />
+    <Compile Include="ModelModel\CustomerModel.cs" />
+    <Compile Include="ModelModel\DeveloperModel.cs" />
+    <Compile Include="ModelModel\ProjectModel.cs" />
+    <Compile Include="ModelModel\TaskModel.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Developer.cs" />

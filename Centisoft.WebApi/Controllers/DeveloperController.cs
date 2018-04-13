@@ -11,10 +11,11 @@ namespace Centisoft.WebApi.Controllers
 {
     public class DeveloperController : ApiController
     {
+        // WARNING this does not currently work
         public IDeveloperFacade developerFacade;
-        public DeveloperController(/*IDeveloperFacade developerFacade*/)
+        public DeveloperController(IDeveloperFacade developerFacade)
         {
-            //this.developerFacade = developerFacade;
+            this.developerFacade = developerFacade;
 
         }
         // GET: api/Developer

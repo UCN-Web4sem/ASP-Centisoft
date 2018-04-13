@@ -16,7 +16,7 @@ namespace Centisoft.WebApi.Filters
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             base.OnActionExecuting(actionContext);
-            string sToken = "bla bla bla";
+            string sToken = "bla";
             HttpResponseMessage responeMsg = new HttpResponseMessage();
             ClientRepo repo = new ClientRepo();
             Client client = null;
