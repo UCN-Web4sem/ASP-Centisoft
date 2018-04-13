@@ -1,7 +1,9 @@
-﻿using Centisoft.Core.Models;
+﻿using Centisoft.Core.ModelModel;
+using Centisoft.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +11,15 @@ namespace Centisoft.Core.DAL
 {
     public class CustomerRepo : BaseRepo
     {
-        public List<Customer> LoadAll()
+        private ModelFactory modelFactory;
+
+        public CustomerRepo(HttpRequestMessage request)
         {
-            return context.Customers.ToList();
+            modelFactory = new ModelFactory(request);
+        }
+        public List<CustomerModel> LoadAll()
+        {
+            return context.Customers.ToList().Select(modelFactory.Create).ToList();
         }
 
         public Customer Load(int id)

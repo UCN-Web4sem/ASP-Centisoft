@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,13 @@ namespace Centisoft.Core.DAL
 {
     public class DeveloperRepo : BaseRepo
     {
+        private ModelFactory modelFactory;
+
+        public DeveloperRepo(HttpRequestMessage request)
+        {
+            modelFactory = new ModelFactory(request);
+
+        }
         public List<Developer> LoadAll(int accountId)
         {
             return context.Developers.Where(x => x.AccountId == accountId).ToList();

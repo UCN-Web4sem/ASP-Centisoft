@@ -8,46 +8,45 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Centisoft.WebApi.Filters;
+using Centisoft.Core.ModelModel;
 
 namespace Centisoft.WebApi.Controllers
 {
-    public class CustomerController : ApiController
+    public class CustomerController : BaseApiController
     {
-        private CustomerFacade cFacade;
 
         public CustomerController()
         {
-            this.cFacade = new CustomerFacade();
         }
         // GET: api/Customer
         [MigHeader]
-        public List<Customer> Get()
+        public List<CustomerModel> Get()
         {
-            return cFacade.FindAllCustomers();
+            return TheCustomerFacade.FindAllCustomers();
         }
         [Security]
         // GET: api/Customer/5
         public Customer Get(int id)
         {
-            return cFacade.FindCustomer(id);
+            return TheCustomerFacade.FindCustomer(id);
         }
 
         // POST: api/Customer
         public void Post([FromBody]Customer customer)
         {
-            cFacade.CreateCustomer(customer);
+            TheCustomerFacade.CreateCustomer(customer);
         }
 
         // PUT: api/Customer/5
         public void Put(int id, [FromBody]Customer customer)
         {
-            cFacade.UpdateCustomer(customer);
+            TheCustomerFacade.UpdateCustomer(customer);
         }
 
         // DELETE: api/Customer/5
         public void Delete(int id)
         {
-            cFacade.DeleteCustomer(id);
+            TheCustomerFacade.DeleteCustomer(id);
         }
     }
 }
