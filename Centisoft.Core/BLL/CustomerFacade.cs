@@ -20,9 +20,9 @@ namespace Centisoft.Core.BLL
             modelFactory = new ModelFactory(request);
         }
 
-        public void CreateCustomer(Customer Customer)
+        public void CreateCustomer(CustomerModel Customer)
         {
-            CustomerRepo.Save(Customer);
+            CustomerRepo.Save(null, Customer);
         }
 
         public void DeleteCustomer(int id)
@@ -40,9 +40,9 @@ namespace Centisoft.Core.BLL
             return CustomerRepo.LoadAll();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateCustomer(int id, CustomerModel customer)
         {
-            CustomerRepo.Save(customer);
+            CustomerRepo.Save(id, customer);
         }
     }
 }

@@ -27,8 +27,13 @@ namespace Centisoft.Core.DAL
             return context.Customers.FirstOrDefault(x => x.Id == id);
         }
 
-        public void Save(Customer c)
+        public void Save(int? id,CustomerModel cm)
         {
+            if (id != null)
+            {
+                cm.Id = id.Value;
+            }
+            Customer c = modelFactory.Create(cm);
             if (c.Id > 0)
             {
                 context.Entry(c).State = System.Data.Entity.EntityState.Modified;

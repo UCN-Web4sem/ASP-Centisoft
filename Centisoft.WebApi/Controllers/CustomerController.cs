@@ -22,7 +22,9 @@ namespace Centisoft.WebApi.Controllers
         [MigHeader]
         public List<CustomerModel> Get()
         {
-            return TheCustomerFacade.FindAllCustomers();
+            var customers = TheCustomerFacade.FindAllCustomers();
+            Console.WriteLine(customers.First().Url);
+            return customers;
         }
         [Security]
         // GET: api/Customer/5
@@ -32,15 +34,16 @@ namespace Centisoft.WebApi.Controllers
         }
 
         // POST: api/Customer
-        public void Post([FromBody]Customer customer)
+        public void Post([FromBody]CustomerModel customer)
         {
             TheCustomerFacade.CreateCustomer(customer);
         }
 
         // PUT: api/Customer/5
-        public void Put(int id, [FromBody]Customer customer)
+        public void Put(int id, [FromBody]CustomerModel customer)
         {
-            TheCustomerFacade.UpdateCustomer(customer);
+            
+            TheCustomerFacade.UpdateCustomer(id, customer);
         }
 
         // DELETE: api/Customer/5

@@ -34,6 +34,27 @@ namespace Centisoft.Core.DAL
                 Url = urlHelper.Link("DefaultApi", new { id = customer.Id })
 
             };
+            
+        }
+
+        public Customer Create(CustomerModel customerModel)
+        {
+            //var routeDate = urlHelper.Request.GetRouteData();
+            //int id = int.Parse(routeDate.Values["id"].ToString());
+            return new Customer
+            {
+                Id = customerModel.Id,
+                Address = customerModel.Address,
+                Address2 = customerModel.Address2,
+                City = customerModel.City,
+                Country = customerModel.Country,
+                Email = customerModel.Email,
+                Name = customerModel.Name,
+                Phone = customerModel.Phone,
+                Zip = customerModel.Zip,
+                Client = null, // TODO:
+                Projects = null // TODO:
+            };
         }
     }
 }
