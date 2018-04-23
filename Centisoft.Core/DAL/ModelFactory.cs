@@ -37,13 +37,13 @@ namespace Centisoft.Core.DAL
             
         }
 
-        public Customer Create(CustomerModel customerModel)
+        public Customer Create(int id, CustomerModel customerModel)
         {
             //var routeDate = urlHelper.Request.GetRouteData();
             //int id = int.Parse(routeDate.Values["id"].ToString());
             return new Customer
             {
-                Id = customerModel.Id,
+                Id = id,
                 Address = customerModel.Address,
                 Address2 = customerModel.Address2,
                 City = customerModel.City,

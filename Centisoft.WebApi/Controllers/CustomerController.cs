@@ -26,9 +26,8 @@ namespace Centisoft.WebApi.Controllers
             Console.WriteLine(customers.First().Url);
             return customers;
         }
-        [Security]
         // GET: api/Customer/5
-        public Customer Get(int id)
+        public CustomerModel Get(int id)
         {
             return TheCustomerFacade.FindCustomer(id);
         }

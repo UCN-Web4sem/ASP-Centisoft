@@ -13,11 +13,11 @@ namespace Centisoft.WebApi.Controllers
     {
         // WARNING this does not currently work
         public IDeveloperFacade developerFacade;
-        public DeveloperController(IDeveloperFacade developerFacade)
-        {
-            this.developerFacade = developerFacade;
+        //public DeveloperController(IDeveloperFacade developerFacade)
+        //{
+        //    this.developerFacade = developerFacade;
 
-        }
+        //}
         // GET: api/Developer
         [Filters.MigHeader]
         public List<Developer> Get()

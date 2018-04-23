@@ -22,9 +22,9 @@ namespace Centisoft.Core.DAL
             return context.Customers.ToList().Select(modelFactory.Create).ToList();
         }
 
-        public Customer Load(int id)
+        public CustomerModel Load(int id)
         {
-            return context.Customers.FirstOrDefault(x => x.Id == id);
+            return modelFactory.Create( context.Customers.FirstOrDefault(x => x.Id == id));
         }
 
         public void Save(int? id,CustomerModel cm)
@@ -33,7 +33,7 @@ namespace Centisoft.Core.DAL
             {
                 cm.Id = id.Value;
             }
-            Customer c = modelFactory.Create(cm);
+            Customer c = modelFactory.Create(id.Value, cm);
             if (c.Id > 0)
             {
                 context.Entry(c).State = System.Data.Entity.EntityState.Modified;
@@ -47,8 +47,8 @@ namespace Centisoft.Core.DAL
 
         public void Delete(int id)
         {
-            Customer c = Load(id);
-            context.Customers.Remove(c);
+            context.Entry(context.Customers.FirstOrDefault(x => x.Id == id)).State =  System.Data.Entity.EntityState.Deleted;
+            context.SaveChanges();
         }
     }
 }

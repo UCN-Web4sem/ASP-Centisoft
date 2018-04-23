@@ -30,7 +30,7 @@ namespace Centisoft.Core.BLL
             CustomerRepo.Delete(id);
         }
 
-        public Customer FindCustomer(int id)
+        public CustomerModel FindCustomer(int id)
         {
             return CustomerRepo.Load(id);
         }
